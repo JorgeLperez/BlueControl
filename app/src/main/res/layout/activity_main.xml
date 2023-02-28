@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="251dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="#1A6278"
+        android:fontFamily="sans-serif"
+        android:text="@string/Titlename"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/FrontButton"
+        android:layout_width="137dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="137dp"
+        android:backgroundTint="#002E2B2B"
+        android:contentDescription="@string/arrowF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title"
+        app:srcCompat="@drawable/arrowfront"
+        android:onClick="moveFront"/>
+
+    <ImageButton
+        android:id="@+id/LeftButton"
+        android:layout_width="162dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/arrowL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FrontButton"
+        app:srcCompat="@drawable/arrowleft"
+        android:onClick="moveLeft"/>
+
+    <ImageButton
+        android:id="@+id/RightButton"
+        android:layout_width="162dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/arrowR"
+        app:layout_constraintBottom_toTopOf="@+id/BackButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FrontButton"
+        app:srcCompat="@drawable/arrowright"
+        android:onClick="moveRight"/>
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="137dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="180dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/arrowB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LeftButton"
+        app:srcCompat="@drawable/arrowback"
+        android:onClick="moveBack"/>
+
+    <TextView
+        android:id="@+id/DisplayCommand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="177dp"
+        android:text="@string/send"
+        android:textAlignment="center"
+        android:textColor="#322F2F"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

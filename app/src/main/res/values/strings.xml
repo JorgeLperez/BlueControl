@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BlueControl</string>
+    <string name="Titlename">Remote Control</string>
+    <string name="arrowR">move Right</string>
+    <string name="arrowL">move Left</string>
+    <string name="arrowF">move Front</string>
+    <string name="arrowB">move Back</string>
+    <string name="send">Send Command ...</string>
+</resources>
