@@ -12,6 +12,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:background="#1A6278"
+        android:contentDescription="TitlePrincipal"
         android:fontFamily="sans-serif"
         android:text="@string/Titlename"
         android:textAlignment="center"
@@ -22,78 +23,62 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/FrontButton"
-        android:layout_width="137dp"
-        android:layout_height="162dp"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="137dp"
-        android:backgroundTint="#002E2B2B"
+        android:id="@+id/imageButton"
+        android:layout_width="145dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="133dp"
+        android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/arrowF"
+        android:onClick="SendMovetoFront"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title"
-        app:srcCompat="@drawable/arrowfront"
-        android:onClick="moveFront"/>
+        app:srcCompat="@drawable/arrowfront" />
 
     <ImageButton
-        android:id="@+id/LeftButton"
-        android:layout_width="162dp"
-        android:layout_height="137dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/imageButton2"
+        android:layout_width="158dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="37dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/arrowL"
+        android:onClick="SendMovetoLeft"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FrontButton"
-        app:srcCompat="@drawable/arrowleft"
-        android:onClick="moveLeft"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:srcCompat="@drawable/arrowleft" />
 
     <ImageButton
-        android:id="@+id/RightButton"
-        android:layout_width="162dp"
-        android:layout_height="137dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/imageButton3"
+        android:layout_width="158dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/arrowR"
-        app:layout_constraintBottom_toTopOf="@+id/BackButton"
+        android:onClick="SenMovetoRight"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FrontButton"
-        app:srcCompat="@drawable/arrowright"
-        android:onClick="moveRight"/>
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:srcCompat="@drawable/arrowright" />
 
     <ImageButton
-        android:id="@+id/BackButton"
-        android:layout_width="137dp"
-        android:layout_height="162dp"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="180dp"
+        android:id="@+id/imageButton4"
+        android:layout_width="145dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="133dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/arrowB"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="SendMovetoBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LeftButton"
-        app:srcCompat="@drawable/arrowback"
-        android:onClick="moveBack"/>
-
-    <TextView
-        android:id="@+id/DisplayCommand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="177dp"
-        android:text="@string/send"
-        android:textAlignment="center"
-        android:textColor="#322F2F"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BackButton" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:srcCompat="@drawable/arrowback" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
